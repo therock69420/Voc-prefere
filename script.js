@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
         {
         texto: "Ser filho do Elon Musk",
-        afirmacao: "Mas será fadado a uma vida simples",
+        afirmacao: "Fadado a uma vida simples",
         },
         {
         texto: "Estudar na melhor escola da América Latina ",
-        afirmacao: "Mas somente conseguira se comunicar através da dança",
+        afirmacao: "Somente conseguira se comunicar através da dança",
         }
     ]
     },
@@ -23,11 +23,11 @@ const perguntas = [
         alternativas: [
         {
         texto: "Você prefere que a água dos rios seja feita de suco de laranja",
-        afirmacao: "",
+        afirmacao: "Blabla",
         },
         {
         texto: "Ou todos os animais selvagens usem óculos de sol, chapéus e falem coreano",
-        afirmacao: "",
+        afirmacao: "Blabla",
         }
         ]
     },
@@ -36,11 +36,11 @@ const perguntas = [
         alternativas: [
         {
         texto: "Ter um assistente virtual que só entende comandos quando você fala como se fosse um personagem feminino de desenho animado",
-        afirmacao: "",
+        afirmacao: "Blabla",
         },
         {
         texto: "Ou usar um computador que só funciona quando você dança macarena sem camisa",
-        afirmacao: "",
+        afirmacao: "Blabla",
         }
         ]
     }   

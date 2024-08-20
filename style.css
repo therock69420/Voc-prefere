@@ -69,3 +69,12 @@ button:hover{
     color: var(--cor-principal);
 }
 
+.images-alternativas {
+    display: flex;       
+}
+
+.images-alternativas img{
+    margin: 1rem;
+    width: 250px;
+    border-radius: .5rem;
+}

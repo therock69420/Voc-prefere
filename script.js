@@ -9,12 +9,12 @@ const perguntas = [
         enunciado: "No âmbito social, você prefere:",
         alternativas: [
         {
-        texto: "Ser o único que fala normalmente em uma sala cheia de pessoas que só podem gritar",
-        afirmacao: "",
+        texto: "Ser filho do Elon Musk",
+        afirmacao: "Mas será fadado a uma vida simples",
         },
         {
-        texto: "Ser o único que só pode sussurrar em uma sala cheia de pessoas que gritam?",
-        afirmacao: "",
+        texto: "Estudar na melhor escola da América Latina ",
+        afirmacao: "Mas somente conseguira se comunicar através da dança",
         }
     ]
     },
@@ -26,7 +26,7 @@ const perguntas = [
         afirmacao: "",
         },
         {
-        texto: "Ou todos os animais selvagens usem óculos de sol e chapéus",
+        texto: "Ou todos os animais selvagens usem óculos de sol, chapéus e falem coreano",
         afirmacao: "",
         }
         ]
@@ -35,11 +35,11 @@ const perguntas = [
         enunciado: "No âmbito tecnológico, você prefere:",
         alternativas: [
         {
-        texto: "Ter um assistente virtual que só entende comandos quando você fala como se fosse um personagem de desenho animado",
+        texto: "Ter um assistente virtual que só entende comandos quando você fala como se fosse um personagem feminino de desenho animado",
         afirmacao: "",
         },
         {
-        texto: "Ou usar um computador que só funciona quando você dança a macarena",
+        texto: "Ou usar um computador que só funciona quando você dança macarena sem camisa",
         afirmacao: "",
         }
         ]
@@ -47,24 +47,40 @@ const perguntas = [
 ]
 
 let atual = 0;
+let historiaFinal = "";
 
 function mostraPergunta(){
-    perguntaAtual = perguntas[atual]
-    caixaPerguntas.textContent = perguntaAtual.enunciado
-    caixaAlternativas.textContent = ""
-    mostraAlternativas()
+    if(atual >= perguntas.length){
+        mostraResultado()
+        return
+    }
+
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+    mostraAlternativas();
 }
 
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
-        const botaoAlternativa = document.createElement("button")
-        botaoAlternativa.textContent = alternativa.texto
-        botaoAlternativa.addEventListener("click", function() {
-            atual++;
-            mostraPergunta()
-    })
+        const botaoAlternativa = document.createElement("button");
+        botaoAlternativa.textContent = alternativa.texto;
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa))
         caixaAlternativas.appendChild(botaoAlternativa)
 
 }}
+
+function respostaSelecionada(alternativa) {
+    const afirmacoes = alternativa.afirmacao;
+    historiaFinal += afirmacoes + "";
+    atual++;
+    mostraPergunta();
+}
+
+function mostraResultado() {
+    caixaPerguntas.textContent = "Então, você escolheu...";
+    textResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
 
 mostraPergunta()

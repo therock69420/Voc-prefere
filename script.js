@@ -23,11 +23,11 @@ const perguntas = [
         alternativas: [
         {
         texto: "Você prefere que a água dos rios seja feita de suco de laranja",
-        afirmacao: "Blabla",
+        afirmacao: "e você terá 1,50m de altura",
         },
         {
         texto: "Ou todos os animais selvagens usem óculos de sol, chapéus e falem coreano",
-        afirmacao: "Blabla",
+        afirmacao: "e você terá 120 kilos de peso",
         }
         ]
     },
@@ -36,11 +36,11 @@ const perguntas = [
         alternativas: [
         {
         texto: "Ter um assistente virtual que só entende comandos quando você fala como se fosse um personagem feminino de desenho animado",
-        afirmacao: "Blabla",
+        afirmacao: "e você usará vestidos de noiva até o fim dos tempos! :)",
         },
         {
         texto: "Ou usar um computador que só funciona quando você dança macarena sem camisa",
-        afirmacao: "Blabla",
+        afirmacao: "e você viverá na Espanha até sua morte, estará preso lá para sempre! :)",
         }
         ]
     }   
@@ -72,7 +72,7 @@ function mostraAlternativas() {
 
 function respostaSelecionada(alternativa) {
     const afirmacoes = alternativa.afirmacao;
-    historiaFinal += afirmacoes + "";
+    historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
 }
